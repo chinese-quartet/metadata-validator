@@ -21,9 +21,20 @@ python setup.py install
 ### Usage
 
 ```bash
-Usage: metadata_validator [OPTIONS]
+Usage: metav [OPTIONS] COMMAND [ARGS]...
 
-  Console script for metadata_validator.
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  generate-template  Generate metadata template as a xlsx file.
+  validate           Metadata Validator
+```
+
+```bash
+Usage: metav validate [OPTIONS]
+
+  Metadata Validator
 
 Options:
   -i, --input FILE                Input file path, only support xlsx file.
@@ -37,12 +48,37 @@ Options:
   --help                          Show this message and exit.
 ```
 
+```bash
+Usage: metav generate-template [OPTIONS]
+
+  Generate metadata template as a xlsx file.
+
+Options:
+  -o, --output TEXT               Output metadata template as a file.
+                                  [required]
+  -t, --template-type [DNAseq|RNAseq|Proteomics|Metabolomics]
+                                  It support the following metadata tables:
+                                  'DNAseq', 'RNAseq', 'Proteomics,
+                                  'Metabolomics'  [required]
+  --help                          Show this message and exit.
+```
+
 ### Example
 
-Validate your metadata file of DNAseq template with the following command:
+#### Generate metadata template
 
 ```bash
-metadata_validator -i your_metadata_file.xlsx -o output.log -t DNAseq
+metav generate-template -t Metabolomics -o metabolomics_metadata.xlsx
+```
+
+![metabolomics_metadata](./assets/metabolomics-metadata-table.png)
+
+#### Validate metadata
+
+Validate your metadata file of Metabolomics template with the following command:
+
+```bash
+metav validate -i your_metadata_file.xlsx -o output.log -t Metabolomics
 ```
 
 ### Metada
@@ -50,8 +86,11 @@ metadata_validator -i your_metadata_file.xlsx -o output.log -t DNAseq
 * Free software: MIT license
 * Documentation: https://metadata-validator.readthedocs.io.
 
-
 ### Features
+
+- Generate metadata template as a xlsx file.
+
+- Validate metadata file.
 
 ### TODO
 
