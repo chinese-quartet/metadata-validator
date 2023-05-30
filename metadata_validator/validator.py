@@ -210,7 +210,7 @@ class MetadataValidator:
 
 
 class DNAseqMetadataValidator(MetadataValidator):
-    def __init__(self, filepath: Path, sheet_names: str=["metadata", "quality_control"]) -> None:
+    def __init__(self, filepath: Path, sheet_names: List[str]=["metadata", "quality_control"]) -> None:
         specs = {
             "metadata": dnaseq_metadata_specs,
             "quality_control": dnaseq_quality_control_specs

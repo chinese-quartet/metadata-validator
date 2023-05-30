@@ -19,7 +19,7 @@ validator_dict = {
 def main(input, output, template_type):
     """Console script for metadata_validator."""
     if template_type in validator_dict.keys():
-        validator = validator_dict[template_type](input, output)
+        validator = validator_dict[template_type](input)
         validator.validate()
 
         error_msg = validator.errors
@@ -30,6 +30,7 @@ def main(input, output, template_type):
         else:
             with open(output, "w") as f:
                 f.write(error_msg)
+                f.write("\n")
                 f.write(warning_msg)
     else:
         click.echo("The template type is not supported.")
