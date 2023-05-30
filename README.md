@@ -1,8 +1,8 @@
 ## Metadata Validator
 
-![https://img.shields.io/pypi/v/metadata_validator.svg](https://pypi.python.org/pypi/metadata_validator)
+<!-- ![https://img.shields.io/pypi/v/metadata_validator.svg](https://pypi.python.org/pypi/metadata_validator)
 ![https://img.shields.io/travis/yjcyxky/metadata_validator.svg](https://travis-ci.com/yjcyxky/metadata_validator)
-![https://readthedocs.org/projects/metadata-validator/badge/?version=latest](https://metadata-validator.readthedocs.io/en/latest/?version=latest)
+![https://readthedocs.org/projects/metadata-validator/badge/?version=latest](https://metadata-validator.readthedocs.io/en/latest/?version=latest) -->
 
 ### Installation
 
